@@ -14,6 +14,19 @@ const Data = () => {
 					años liderando el mercado de materiales de construcción
 				</StyledDataText>
 			</StyledDataItem>
+			<StyledDataItem>
+				<StyledDataNumber>8k+</StyledDataNumber>
+				<StyledDataText>
+					proyectos arquitectónicos completados exitosamente
+				</StyledDataText>
+			</StyledDataItem>
+
+			<StyledDataItem>
+				<StyledDataNumber>98%</StyledDataNumber>
+				<StyledDataText>
+					control de calidad en cada uno de los pedidos
+				</StyledDataText>
+			</StyledDataItem>
 		</StyledDataContainer>
 	);
 };

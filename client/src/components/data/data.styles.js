@@ -4,7 +4,8 @@ import { TYPOGRAPHY } from '../../styles/Typography';
 export const StyledDataContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 20px 40px;
+	padding: 40px 40px;
+	gap: 40px;
 `;
 export const StyledDataItem = styled.div`
 	display: flex;
