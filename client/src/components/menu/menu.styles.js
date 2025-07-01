@@ -11,6 +11,7 @@ export const StyledMenuContainer = styled.div`
 	margin: 0;
 	width: 280px;
 	position: relative;
+	z-index: 1;
 `;
 export const StyledMenuIconContainer = styled.img`
 	cursor: pointer;
