@@ -1,5 +1,7 @@
 import FotoGallery from '../fotoGallery/FotoGallery';
 import {
+	StyledButton,
+	StyledGeneralContainer,
 	StyledSubheader,
 	StyledTextContainer,
 	StyledTitle
@@ -7,7 +9,7 @@ import {
 
 const SecondSection = () => {
 	return (
-		<>
+		<StyledGeneralContainer>
 			<StyledTextContainer>
 				<StyledTitle>CALIDAD QUE SE VE</StyledTitle>
 				<StyledSubheader>
@@ -16,7 +18,8 @@ const SecondSection = () => {
 				</StyledSubheader>
 			</StyledTextContainer>
 			<FotoGallery />
-		</>
+			<StyledButton>CONTACTA A UN VENDEDOR</StyledButton>
+		</StyledGeneralContainer>
 	);
 };
 

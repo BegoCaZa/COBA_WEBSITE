@@ -4,6 +4,7 @@ export const GalleryGrid = styled.div`
 	display: grid;
 	gap: 20px;
 	margin-bottom: 40px;
+	padding: 0 20px;
 
 	/* Mobile: 1 columna */
 	grid-template-columns: 1fr;
