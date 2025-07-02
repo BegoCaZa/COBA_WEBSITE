@@ -29,18 +29,18 @@ export const StyledProductCarouselContainer = styled.div`
 `;
 
 export const StyledProductCard = styled.div`
-	min-width: 200px;
-	max-width: 200px;
+	width: 300px;
+	height: 360px;
 	flex-shrink: 0;
 	background: white;
 	border-radius: 12px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	padding: 12px;
-	text-align: center;
+	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+	/* padding: 12px; */
+	text-align: left;
 
 	img {
 		width: 100%;
-		height: 160px;
+		height: 340px;
 		object-fit: cover;
 		border-radius: 8px;
 	}

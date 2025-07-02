@@ -27,13 +27,13 @@ const ProductsSection = () => {
 			<StyledTitle>NUESTROS PRODUCTOS</StyledTitle>
 			<p>Productos con materiales de la mejor calidad</p>
 
-			<div style={{ position: 'relative', marginTop: '24px' }}>
+			<div style={{ position: 'relative', marginTop: '20px' }}>
 				<StyledScrollButton left onClick={() => scroll('left')}>
 					<ArrowLeft />
 				</StyledScrollButton>
 
 				<StyledProductCarouselContainer ref={scrollRef}>
-					{CATEGORIES.map((item, index) => (
+					{CATEGORIES.map(item => (
 						<StyledProductCard key={v4()}>
 							<img src={item.src} alt={item.name} />
 							<div className='name'>{item.name}</div>
