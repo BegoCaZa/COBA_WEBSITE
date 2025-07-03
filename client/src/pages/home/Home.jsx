@@ -1,3 +1,4 @@
+import ContactSection from '../../components/contactSection/ContactSection.jsx';
 import CTAPresupuesto from '../../components/ctaPresupuesto/CTApresupuesto.jsx';
 import Data from '../../components/data/Data.jsx';
 import HomeHeaderFoto from '../../components/homeHeaderFoto/HomeHeaderFoto.jsx';
@@ -17,6 +18,7 @@ const Home = () => {
 			<ProductsSection />
 			<CTAPresupuesto />
 			<MapsSection />
+			<ContactSection />
 		</>
 	);
 };
