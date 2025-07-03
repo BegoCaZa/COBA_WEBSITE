@@ -35,6 +35,7 @@ const ContactSection = () => {
 					</StyledText>
 				</StyledOption>
 			</StyledContactOptionsContainer>
+			<ContactForm />
 		</StyledGeneralContainer>
 	);
 };
