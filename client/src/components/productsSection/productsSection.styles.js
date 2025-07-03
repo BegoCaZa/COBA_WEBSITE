@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { TYPOGRAPHY } from '../../styles/Typography';
+import { COLORS } from '../../styles/Colors';
 
 export const StyledGeneralContainer = styled.div`
 	padding: 20px;
@@ -11,8 +12,21 @@ export const StyledTitle = styled.h2`
 	font-weight: 500;
 	font-family: ${TYPOGRAPHY.headingFont};
 	text-transform: uppercase;
-	margin-bottom: 20px;
-	color: #333;
+	margin-bottom: 0px;
+	margin-top: 0;
+	color: ${COLORS.irishCoffeeDark};
+	text-align: center;
+`;
+export const StyledSubtitle = styled.p`
+	font-size: 18px;
+	color: ${COLORS.irishCoffeeDark};
+	text-align: center;
+	margin-top: 10px;
+`;
+
+export const StyledContainer = styled.div`
+	position: relative;
+	margin-top: 20px;
 `;
 
 export const StyledProductCarouselContainer = styled.div`
@@ -71,6 +85,11 @@ export const StyledScrollButton = styled.button`
 	}
 `;
 
+export const StyledCatalogButtonContainer = styled.div`
+	text-align: left;
+	margin-top: 24px;
+`;
+
 export const StyledCatalogButton = styled.button`
 	padding: 10px 20px;
 	border: 1px solid #ccc;
@@ -82,4 +101,9 @@ export const StyledCatalogButton = styled.button`
 	&:hover {
 		background: #f9f9f9;
 	}
+`;
+
+export const StyledCardText = styled.div`
+	font-weight: 600;
+	margin-top: 10px;
 `;

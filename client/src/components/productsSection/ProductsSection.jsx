@@ -6,7 +6,11 @@ import {
 	StyledProductCarouselContainer,
 	StyledProductCard,
 	StyledScrollButton,
-	StyledCatalogButton
+	StyledCatalogButton,
+	StyledCardText,
+	StyledContainer,
+	StyledCatalogButtonContainer,
+	StyledSubtitle
 } from './productsSection.styles';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { v4 } from 'uuid';
@@ -25,9 +29,11 @@ const ProductsSection = () => {
 	return (
 		<StyledGeneralContainer>
 			<StyledTitle>NUESTROS PRODUCTOS</StyledTitle>
-			<p>Productos con materiales de la mejor calidad</p>
+			<StyledSubtitle>
+				Productos con materiales de la mejor calidad para tus proyectos
+			</StyledSubtitle>
 
-			<div style={{ position: 'relative', marginTop: '20px' }}>
+			<StyledContainer>
 				<StyledScrollButton left onClick={() => scroll('left')}>
 					<ArrowLeft />
 				</StyledScrollButton>
@@ -36,7 +42,7 @@ const ProductsSection = () => {
 					{CATEGORIES.map(item => (
 						<StyledProductCard key={v4()}>
 							<img src={item.src} alt={item.name} />
-							<div className='name'>{item.name}</div>
+							<StyledCardText>{item.name}</StyledCardText>
 						</StyledProductCard>
 					))}
 				</StyledProductCarouselContainer>
@@ -44,11 +50,11 @@ const ProductsSection = () => {
 				<StyledScrollButton onClick={() => scroll('right')}>
 					<ArrowRight />
 				</StyledScrollButton>
-			</div>
+			</StyledContainer>
 
-			<div style={{ textAlign: 'center', marginTop: '24px' }}>
+			<StyledCatalogButtonContainer>
 				<StyledCatalogButton>Ver catálogo</StyledCatalogButton>
-			</div>
+			</StyledCatalogButtonContainer>
 		</StyledGeneralContainer>
 	);
 };
