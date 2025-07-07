@@ -78,7 +78,7 @@ export const StyledScrollButton = styled.button`
 	z-index: 10;
 	transition: background 0.3s ease;
 
-	${props => (props.left ? 'left: 0;' : 'right: 0;')}
+	${props => (props.$left ? 'left: 0;' : 'right: 0;')}
 
 	&:hover {
 		background: #f0f0f0;

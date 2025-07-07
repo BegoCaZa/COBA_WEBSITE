@@ -34,7 +34,7 @@ const ProductsSection = () => {
 			</StyledSubtitle>
 
 			<StyledContainer>
-				<StyledScrollButton left onClick={() => scroll('left')}>
+				<StyledScrollButton $left onClick={() => scroll('left')}>
 					<ArrowLeft />
 				</StyledScrollButton>
 

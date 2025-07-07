@@ -1,3 +1,4 @@
+import ContactForm from '../contactForm/ContactForm';
 import {
 	StyledContactOptionsContainer,
 	StyledGeneralContainer,

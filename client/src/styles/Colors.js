@@ -8,5 +8,6 @@ export const COLORS = {
 	irishCoffeeDarker: '#28160E',
 	irishCoffeeDarkest: '#1E100A',
 	creamCan: '#F1DB59',
-	creamCanLight: '#F5E58A'
+	creamCanLight: '#F5E58A',
+	red: '#FF0000'
 };
