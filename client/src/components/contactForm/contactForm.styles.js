@@ -9,6 +9,12 @@ export const StyledForm = styled.form`
 
 	padding-top: 20px;
 	width: 100%;
+
+	@media screen {
+		@media (min-width: 768px) {
+			width: 50%;
+		}
+	}
 `;
 
 export const StyledInputContainer = styled.div`

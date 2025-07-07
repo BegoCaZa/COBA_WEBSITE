@@ -8,6 +8,15 @@ export const StyledGeneralContainer = styled.div`
 	align-items: flex-start;
 	color: ${COLORS.irishCoffeeDark};
 	padding: 30px;
+
+	@media screen {
+		@media (min-width: 768px) {
+			flex-direction: row;
+			padding: 50px 90px;
+			gap: 30px;
+			justify-content: space-between;
+		}
+	}
 `;
 
 export const StyledSectionHeader = styled.div`
