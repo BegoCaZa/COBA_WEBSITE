@@ -1,0 +1,10 @@
+@HOST=http://localhost:3000
+
+POST {{HOST}}/api/products
+Content-Type: application/json
+{
+  "name": "Product Name",
+  "price": 100,
+  "colors": ["red", "blue", "green"],
+  "description": "Product Description",
+}
