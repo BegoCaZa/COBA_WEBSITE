@@ -10,6 +10,20 @@ Content-Type: application/json
   "description": "Teja Aranjuez Description"
 }
 
-
+###
 GET {{HOST}}/api/products
 
+###
+PATCH {{HOST}}/api/products/6877512f21aae1f6a37447a1
+Content-Type: application/json
+
+{
+  "name": "Teja Aranjuez",
+  "price": 120,
+  "colors": ["red", "blue", "green", "yellow"],
+  "description": "Teja Aranjuez Description Updated"
+}
+
+###
+DELETE {{HOST}}/api/products/6877512f21aae1f6a37447a1
+ 
