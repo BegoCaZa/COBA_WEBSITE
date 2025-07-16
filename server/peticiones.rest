@@ -2,9 +2,14 @@
 
 POST {{HOST}}/api/products
 Content-Type: application/json
+
 {
-  "name": "Product Name",
+  "name": "Teja Aranjuez",
   "price": 100,
   "colors": ["red", "blue", "green"],
-  "description": "Product Description",
+  "description": "Teja Aranjuez Description"
 }
+
+
+GET {{HOST}}/api/products
+
