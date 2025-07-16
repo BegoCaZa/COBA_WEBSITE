@@ -3,9 +3,12 @@ const { Schema, model } = require('mongoose');
 const productSchema = new Schema(
   {
     name: { type: String, require: true },
-    price: { type: Number, require: true },
+    model: { type: String, require: true },
     colors: [String], //algunas veces no tiene colores
-    description: String
+    description: String,
+    category: String,
+    technicalData: String,
+    image: String
   },
   { timestamps: true, versionKey: false }
 );

@@ -4,26 +4,33 @@ POST {{HOST}}/api/products
 Content-Type: application/json
 
 {
-  "name": "Teja Aranjuez",
-  "price": 100,
-  "colors": ["red", "blue", "green"],
-  "description": "Teja Aranjuez Description"
+  "name": "Adopasto Macizo",
+  "model": "Adopasto Macizo",
+  "colors": [],
+  "description": "El adopasto es un tipo de bloque prefabricado de concreto con diseño perforado, especialmente creado para permitir el crecimiento del pasto entre sus aberturas. Combina funcionalidad estructural con una estética natural, siendo ideal para áreas que requieren soporte vehicular o peatonal sin perder permeabilidad, como estacionamientos, caminos ecológicos, jardines y zonas verdes. Su instalación ayuda a reducir la escorrentía del agua y mejora la integración del paisaje con el entorno urbano. \n ¿Buscas una solución ecológica y resistente para tus espacios exteriores? El adopasto es la opción perfecta para combinar naturaleza y funcionalidad. ¡Contáctanos hoy y transforma tu proyecto con nuestros productos de calidad!",
+  "category": "Adocretos",
+  "technicalData": "PDFs DESCARGABLE",
+  "image": "/assets/images/categorias/Adoquin.png"
 }
 
 ###
 GET {{HOST}}/api/products
 
 ###
-PATCH {{HOST}}/api/products/6877512f21aae1f6a37447a1
+PATCH {{HOST}}/api/products/687759bbbc3859fa3ad67425
 Content-Type: application/json
 
 {
   "name": "Teja Aranjuez",
   "price": 120,
   "colors": ["red", "blue", "green", "yellow"],
-  "description": "Teja Aranjuez Description Updated"
+  "description": "Teja Aranjuez Description Updated",
+  "category": "Tejas",
+  "image": "/assets/images/categorias/Placeholder Image.png"
 }
 
 ###
 DELETE {{HOST}}/api/products/6877512f21aae1f6a37447a1
  
+ ###
+GET {{HOST}}/api/products/tejas

@@ -12,6 +12,14 @@ export const StyledMenuContainer = styled.div`
 	width: 280px;
 	position: relative;
 	z-index: 1;
+
+	@media (min-width: 768px) {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px;
+	}
 `;
 export const StyledMenuIconContainer = styled.img`
 	cursor: pointer;
@@ -20,6 +28,10 @@ export const StyledMenuIconContainer = styled.img`
 	top: -10px;
 	z-index: 2;
 	scale: 1.2;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
 `;
 
 export const StyledOptionsContainer = styled.ul`
@@ -39,6 +51,20 @@ export const StyledOptionsContainer = styled.ul`
 	transform: ${({ $menuOpen }) =>
 		$menuOpen ? 'translateX(0)' : 'translateX(100%)'};
 	transition: transform 0.5s ease-in-out;
+
+	@media (min-width: 768px) {
+		/* Estilos para desktop */
+		position: static;
+		width: auto;
+		height: auto;
+		background: white;
+		backdrop-filter: none;
+		padding: 0;
+		flex-direction: row;
+		gap: 40px;
+		transform: none;
+		transition: none;
+	}
 `;
 
 export const StyledPageItem = styled(NavLink)`
@@ -53,6 +79,10 @@ export const StyledPageItem = styled(NavLink)`
 
 	&.active {
 		border-bottom: 3px solid ${COLORS.white};
+	}
+
+	@media (min-width: 768px) {
+		color: ${COLORS.irishCoffeeDarkest};
 	}
 `;
 

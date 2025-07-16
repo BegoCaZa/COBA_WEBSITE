@@ -17,6 +17,6 @@ export const StyledHeaderContainer = styled.header`
 		left: 0;
 		right: 0;
 		z-index: 1000;
-		backdrop-filter: blur(10px);
+		background-color: white;
 	}
 `;
