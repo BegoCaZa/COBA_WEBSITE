@@ -1,3 +1,4 @@
+import CategoriesGrid from '../../components/categoriesGrid/CategoriesGrid';
 import ProductHeaderFoto from '../../components/productHeaderFoto/ProductHeaderFoto';
 import {
 	Description,
@@ -19,6 +20,7 @@ const Products = () => {
 						Descubre nuestra amplia gama de<br></br>materiales de construcción.
 					</Description>
 				</SecondSectionText>
+				<CategoriesGrid />
 			</FirstSection>
 		</>
 	);
