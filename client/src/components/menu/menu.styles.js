@@ -3,24 +3,6 @@ import { COLORS } from '../../styles/Colors';
 import { TYPOGRAPHY } from '../../styles/Typography';
 import styled from 'styled-components';
 
-export const StyledMenuContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	margin: 0;
-	width: 280px;
-	position: relative;
-	z-index: 1;
-
-	@media (min-width: 768px) {
-		width: 100%;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0px;
-	}
-`;
 export const StyledMenuIconContainer = styled.img`
 	cursor: pointer;
 	position: absolute;
@@ -33,6 +15,24 @@ export const StyledMenuIconContainer = styled.img`
 		display: none;
 	}
 `;
+export const StyledMenuContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: space-between;
+	margin: 0;
+	width: 200px;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: 768px) {
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-end; /* Cambio: alinear a la derecha */
+		align-items: center;
+		padding: 0 20px; /* Agregar padding */
+	}
+`;
 
 export const StyledOptionsContainer = styled.ul`
 	position: fixed;
@@ -42,28 +42,29 @@ export const StyledOptionsContainer = styled.ul`
 	background: ${COLORS.irishCoffeeDarker};
 	backdrop-filter: blur(10px);
 	margin: 0;
-	padding: 118px 0 0 32px;
+	padding: 118px 0 0 0px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
+	list-style: none; /* Agregar para quitar bullets */
 
 	transform: ${({ $menuOpen }) =>
 		$menuOpen ? 'translateX(0)' : 'translateX(100%)'};
 	transition: transform 0.5s ease-in-out;
 
 	@media (min-width: 768px) {
-		/* Estilos para desktop */
 		position: static;
 		width: auto;
 		height: auto;
-		background: white;
+		background: transparent; /* Cambio: fondo transparente */
 		backdrop-filter: none;
 		padding: 0;
 		flex-direction: row;
-		gap: 40px;
+		gap: 40px; /* Reducir gap */
 		transform: none;
 		transition: none;
+		align-items: center; /* Centrar verticalmente */
 	}
 `;
 
@@ -74,18 +75,36 @@ export const StyledPageItem = styled(NavLink)`
 	text-decoration: none;
 	color: ${COLORS.white};
 	font-family: ${TYPOGRAPHY.bodyFont};
-	width: 30px;
-	padding-bottom: 3px;
+	width: auto; /* Cambio: auto width */
+	padding-left: 30px;
 
 	&.active {
-		border-bottom: 3px solid ${COLORS.white};
+		border-left: 5px solid ${COLORS.white};
 	}
 
 	@media (min-width: 768px) {
-		color: ${COLORS.irishCoffeeDarkest};
+		color: ${COLORS.black}; /* Cambio: color negro para desktop */
+		padding: 8px 16px; /* Agregar padding */
+		border-radius: 4px; /* Bordes redondeados */
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.05); /* Hover sutil */
+		}
+
+		&.active {
+			border-bottom: none; /* Quitar borde inferior */
+			background-color: ${COLORS.irishCoffeeDarker}; /* Fondo para activo */
+			color: white; /* Texto blanco para activo */
+		}
 	}
 `;
 
 export const StyledPageTitle = styled.span`
 	font-size: ${TYPOGRAPHY.tagline.fontSize};
+
+	@media (min-width: 768px) {
+		font-size: 14px; /* Ajustar tamaño */
+		font-weight: 500; /* Peso de fuente */
+	}
 `;
