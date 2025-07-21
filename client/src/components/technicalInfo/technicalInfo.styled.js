@@ -34,7 +34,7 @@ export const IntroText = styled.p`
 	color: ${COLORS.irishCoffeeDarkest};
 	line-height: 1.4;
 	width: 90%;
-	margin: 0;
+	margin-bottom: 50px;
 	text-align: center;
 
 	@media (min-width: 768px) {
@@ -63,19 +63,21 @@ export const FeatureCard = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	gap: 12px;
 `;
 
 export const IconImage = styled.img`
 	width: 40px;
 	height: 40px;
-	margin-bottom: 20px;
+	margin: 0;
 `;
 export const FeatureTitle = styled.h3`
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: 700;
-	color: #333;
+	font-family: ${TYPOGRAPHY.headingFont};
+	color: ${COLORS.irishCoffeeDarkest};
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin: 0;
 	letter-spacing: 0.5px;
 
 	@media (min-width: 768px) {
@@ -84,13 +86,16 @@ export const FeatureTitle = styled.h3`
 `;
 
 export const FeatureDescription = styled.p`
-	font-size: 14px;
-	color: #555;
+	font-size: 16px;
+	font-family: ${TYPOGRAPHY.bodyFont};
+	color: ${COLORS.irishCoffeeDarkest};
 	line-height: 1.5;
+	margin: 0;
+	width: 80%;
 `;
 
 export const DownloadButton = styled.button`
-	background-color: #4a3424;
+	background-color: ${COLORS.irishCoffeeDark};
 	color: white;
 	padding: 15px 30px;
 	border: none;

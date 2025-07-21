@@ -4,13 +4,13 @@ POST {{HOST}}/api/products
 Content-Type: application/json
 
 {
-  "name": "Guarnición 14x100 cm",
-  "model": "Guarnición 14x100 cm",
+  "name": "CANFRANC",
+  "model": "CANFRANC",
   "colors": [],
-  "description": "La guarnición prefabricada es un elemento de concreto con dimensiones de 100 cm de largo, 27 cm de alto y peso aproximado de 80 kg. Fabricada con cemento, agua, arena y aditivos, se utiliza como delimitador entre calzada y banqueta, así como tope-llanta en estacionamientos. Sus curvas precisas no requieren cimbra ni colado, lo que reduce costos y tiempo de obra. Su acabado liso mejora la estética y permite recuperación de piezas para mantenimiento. Se instala sobre terreno compactado con mortero común, cuidando niveles con regla o hilo, y se deja reposar 48 horas antes de rellenar. Ideal para tráfico rodado por su resistencia y facilidad de colocación.",
-  "category": "Guarniciones",
+  "description": "CANFRANC Un impermeabilizante para construcción es un producto diseñado para proteger superficies estructurales (como techos, muros, losas y cimentaciones) contra la penetración del agua y la humedad. Su función principal es evitar filtraciones que puedan deteriorar materiales como concreto, ladrillo o metal, previniendo así daños estructurales, aparición de hongos, salitre o moho. Existen diferentes tipos: acrílicos, asfálticos, cementosos y de poliuretano, cada uno con propiedades específicas según la zona a proteger. Su aplicación puede ser en frío o en caliente, en capas con brocha, rodillo o mediante sistemas especializados. Un buen impermeabilizante prolonga la vida útil del inmueble, mejora el confort térmico y reduce costos de mantenimiento. Es fundamental elegir el tipo adecuado según las condiciones climáticas, exposición al sol o agua y tipo de superficie. Su uso es esencial tanto en obra nueva como en mantenimiento preventivo o correctivo.",
+  "category": "Impermeabilizantes",
   "technicalData": "PDFs DESCARGABLE",
-  "image": "/assets/images/categorias/Guarniciones.png"
+  "image": "/assets/images/categorias/Postes.png"
 }
 
 ###
