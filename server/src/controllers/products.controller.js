@@ -12,6 +12,20 @@ const getAllProducts = async (req, res) => {
   res.status(200).json(products);
 };
 
+//get all categories
+const getAllCategories = async (req, res) => {
+  const categories = await ProductModel.find().select('category -_id');
+  const finalCategories = [];
+  for (const cat of categories) {
+    console.log(cat);
+    if (!finalCategories.includes(cat.category)) {
+      finalCategories.push(cat.category);
+    }
+  }
+
+  res.status(200).json(finalCategories);
+};
+
 //UPDATE PRODUCT BY ID
 const updateProduct = async (req, res) => {
   const { id } = req.params;
@@ -36,5 +50,6 @@ module.exports = {
   createProduct,
   getAllProducts,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  getAllCategories
 };

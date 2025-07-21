@@ -4,13 +4,13 @@ POST {{HOST}}/api/products
 Content-Type: application/json
 
 {
-  "name": "Adopasto Macizo",
-  "model": "Adopasto Macizo",
+  "name": "Guarnición 14x100 cm",
+  "model": "Guarnición 14x100 cm",
   "colors": [],
-  "description": "El adopasto es un tipo de bloque prefabricado de concreto con diseño perforado, especialmente creado para permitir el crecimiento del pasto entre sus aberturas. Combina funcionalidad estructural con una estética natural, siendo ideal para áreas que requieren soporte vehicular o peatonal sin perder permeabilidad, como estacionamientos, caminos ecológicos, jardines y zonas verdes. Su instalación ayuda a reducir la escorrentía del agua y mejora la integración del paisaje con el entorno urbano. \n ¿Buscas una solución ecológica y resistente para tus espacios exteriores? El adopasto es la opción perfecta para combinar naturaleza y funcionalidad. ¡Contáctanos hoy y transforma tu proyecto con nuestros productos de calidad!",
-  "category": "Adocretos",
+  "description": "La guarnición prefabricada es un elemento de concreto con dimensiones de 100 cm de largo, 27 cm de alto y peso aproximado de 80 kg. Fabricada con cemento, agua, arena y aditivos, se utiliza como delimitador entre calzada y banqueta, así como tope-llanta en estacionamientos. Sus curvas precisas no requieren cimbra ni colado, lo que reduce costos y tiempo de obra. Su acabado liso mejora la estética y permite recuperación de piezas para mantenimiento. Se instala sobre terreno compactado con mortero común, cuidando niveles con regla o hilo, y se deja reposar 48 horas antes de rellenar. Ideal para tráfico rodado por su resistencia y facilidad de colocación.",
+  "category": "Guarniciones",
   "technicalData": "PDFs DESCARGABLE",
-  "image": "/assets/images/categorias/Adoquin.png"
+  "image": "/assets/images/categorias/Guarniciones.png"
 }
 
 ###
@@ -34,3 +34,7 @@ DELETE {{HOST}}/api/products/6877512f21aae1f6a37447a1
  
  ###
 GET {{HOST}}/api/products/tejas
+
+
+###
+GET {{HOST}}/api/products/categories

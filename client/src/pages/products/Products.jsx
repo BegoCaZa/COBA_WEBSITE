@@ -1,5 +1,6 @@
 import CategoriesGrid from '../../components/categoriesGrid/CategoriesGrid';
 import ProductHeaderFoto from '../../components/productHeaderFoto/ProductHeaderFoto';
+import TechnicalInfo from '../../components/technicalInfo/TechnicalInfo';
 import {
 	Description,
 	FirstSection,
@@ -20,8 +21,9 @@ const Products = () => {
 						Descubre nuestra amplia gama de<br></br>materiales de construcción.
 					</Description>
 				</SecondSectionText>
-				<CategoriesGrid />
 			</FirstSection>
+			<CategoriesGrid />
+			<TechnicalInfo />
 		</>
 	);
 };
