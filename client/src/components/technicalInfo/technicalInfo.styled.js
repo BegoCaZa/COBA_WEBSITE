@@ -25,6 +25,7 @@ export const MainTitle = styled.h2`
 	@media (min-width: 768px) {
 		text-align: left;
 		margin-bottom: 20px;
+		font-size: ${TYPOGRAPHY.headings.h1.desktop.fontSize};
 	}
 `;
 
@@ -38,10 +39,11 @@ export const IntroText = styled.p`
 	text-align: center;
 
 	@media (min-width: 768px) {
-		text-align: right;
+		text-align: left;
 		max-width: 50%;
 		margin-left: auto;
 		margin-bottom: 60px;
+		font-size: 20px;
 	}
 `;
 
@@ -70,6 +72,11 @@ export const IconImage = styled.img`
 	width: 40px;
 	height: 40px;
 	margin: 0;
+
+	@media (min-width: 768px) {
+		width: 60px;
+		height: 60px;
+	}
 `;
 export const FeatureTitle = styled.h3`
 	font-size: 22px;
@@ -81,7 +88,7 @@ export const FeatureTitle = styled.h3`
 	letter-spacing: 0.5px;
 
 	@media (min-width: 768px) {
-		font-size: 16px;
+		font-size: 24px;
 	}
 `;
 
@@ -92,6 +99,11 @@ export const FeatureDescription = styled.p`
 	line-height: 1.5;
 	margin: 0;
 	width: 80%;
+
+	@media (min-width: 768px) {
+		font-size: 18px;
+		width: 90%;
+	}
 `;
 
 export const DownloadButton = styled.button`
@@ -122,5 +134,20 @@ export const ButtonContainer = styled.div`
 
 	@media (min-width: 768px) {
 		justify-content: flex-start;
+	}
+`;
+
+export const HeaderContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media screen {
+		@media (min-width: 768px) {
+			align-items: flex-start;
+			flex-direction: row;
+			gap: 20px;
+		}
 	}
 `;

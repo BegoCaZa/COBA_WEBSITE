@@ -15,6 +15,12 @@ export const HeroSection = styled.div`
 	align-items: center;
 	padding: 20px 30px;
 	position: relative;
+
+	@media (min-width: 768px) {
+		padding: 0;
+		width: 100%;
+		height: 550px;
+	}
 `;
 
 export const ContentWrapper = styled.div`
@@ -22,6 +28,10 @@ export const ContentWrapper = styled.div`
 	width: 100%;
 	color: ${COLORS.white};
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 `;
 
 export const MainTitle = styled.h2`
@@ -31,13 +41,10 @@ export const MainTitle = styled.h2`
 	font-weight: 400;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-	/* @media (max-width: 768px) {
-		font-size: 2.5rem;
+	@media (min-width: 768px) {
+		font-size: ${TYPOGRAPHY.headings.h1.desktop.fontSize};
+		margin-top: 15px;
 	}
-
-	@media (max-width: 480px) {
-		font-size: 2rem;
-	} */
 `;
 
 export const Description = styled.p`
@@ -45,8 +52,9 @@ export const Description = styled.p`
 	font-size: ${TYPOGRAPHY.text.medium.fontSize};
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 
-	@media (max-width: 768px) {
-		font-size: 1.1rem;
+	@media (min-width: 768px) {
+		font-size: 26px;
+		width: 65%;
 	}
 `;
 

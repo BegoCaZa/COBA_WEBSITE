@@ -18,7 +18,7 @@ const Products = () => {
 					<Subheader>Construyendo con calidad</Subheader>
 					<Subtitle>PRODUCTOS</Subtitle>
 					<Description>
-						Descubre nuestra amplia gama de<br></br>materiales de construcción.
+						Descubre nuestra amplia gama de materiales de construcción.
 					</Description>
 				</SecondSectionText>
 			</FirstSection>

@@ -6,6 +6,7 @@ import {
 	FeatureDescription,
 	FeaturesGrid,
 	FeatureTitle,
+	HeaderContent,
 	IconImage,
 	IntroText,
 	MainTitle,
@@ -16,13 +17,14 @@ const TechnicalInfo = () => {
 	return (
 		<TechnicalInfoSection>
 			<Container>
-				<MainTitle>Información Técnica</MainTitle>
-				<IntroText>
-					En Coba, ofrecemos fichas técnicas de nuestros productos que incluyen
-					instrucciones de instalación, cuidado y más. Explora nuestro catálogo
-					y encuentra la solución perfecta para tu proyecto.
-				</IntroText>
-
+				<HeaderContent>
+					<MainTitle>Información Técnica</MainTitle>
+					<IntroText>
+						En Coba, ofrecemos fichas técnicas de nuestros productos que
+						incluyen instrucciones de instalación, cuidado y más. Explora
+						nuestro catálogo y encuentra la solución perfecta para tu proyecto.
+					</IntroText>
+				</HeaderContent>
 				<FeaturesGrid>
 					<FeatureCard>
 						<IconImage
