@@ -38,3 +38,7 @@ GET {{HOST}}/api/products/tejas
 
 ###
 GET {{HOST}}/api/products/categories
+
+
+###
+GET {{HOST}}/api/products/categories/Adocretos

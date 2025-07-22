@@ -20,3 +20,12 @@ export const StyledHeaderContainer = styled.header`
 		background-color: white;
 	}
 `;
+
+export const LogoIcon = styled.img`
+	height: 40px;
+	width: auto;
+	@media (min-width: 768px) {
+		height: 50px;
+		padding-left: 30px;
+	}
+`;

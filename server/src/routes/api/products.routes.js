@@ -5,8 +5,8 @@ const ProductController = require('../../controllers/products.controller');
 router.post('/', ProductController.createProduct);
 router.get('/', ProductController.getAllProducts);
 router.get('/categories', ProductController.getAllCategories);
+router.get('/categories/:category', ProductController.getProductsByCategory);
 router.patch('/:id', ProductController.updateProduct);
 router.delete('/:id', ProductController.deleteProduct);
-//:category
 
 module.exports = router;

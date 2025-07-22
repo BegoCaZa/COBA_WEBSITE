@@ -28,9 +28,9 @@ export const StyledMenuContainer = styled.div`
 	@media (min-width: 768px) {
 		width: 100%;
 		flex-direction: row;
-		justify-content: flex-end; /* Cambio: alinear a la derecha */
+		justify-content: flex-end;
 		align-items: center;
-		padding: 0 20px; /* Agregar padding */
+		padding: 0 50px;
 	}
 `;
 
@@ -57,14 +57,14 @@ export const StyledOptionsContainer = styled.ul`
 		position: static;
 		width: auto;
 		height: auto;
-		background: transparent; /* Cambio: fondo transparente */
+		background: transparent;
 		backdrop-filter: none;
 		padding: 0;
 		flex-direction: row;
-		gap: 40px; /* Reducir gap */
+		gap: 40px;
 		transform: none;
 		transition: none;
-		align-items: center; /* Centrar verticalmente */
+		align-items: center;
 	}
 `;
 
@@ -73,9 +73,9 @@ export const StyledPageItem = styled(NavLink)`
 	align-items: center;
 	gap: 11px;
 	text-decoration: none;
-	color: ${COLORS.white};
+	color: ${COLORS.irishCoffeeDarkest};
 	font-family: ${TYPOGRAPHY.bodyFont};
-	width: auto; /* Cambio: auto width */
+	width: auto;
 	padding-left: 30px;
 
 	&.active {
@@ -83,9 +83,9 @@ export const StyledPageItem = styled(NavLink)`
 	}
 
 	@media (min-width: 768px) {
-		color: ${COLORS.black}; /* Cambio: color negro para desktop */
-		padding: 8px 16px; /* Agregar padding */
-		border-radius: 4px; /* Bordes redondeados */
+		color: ${COLORS.irishCoffeeDarkest};
+		padding: 8px 16px;
+		border-left: none;
 		transition: all 0.3s ease;
 
 		&:hover {
@@ -93,9 +93,10 @@ export const StyledPageItem = styled(NavLink)`
 		}
 
 		&.active {
-			border-bottom: none; /* Quitar borde inferior */
-			background-color: ${COLORS.irishCoffeeDarker}; /* Fondo para activo */
-			color: white; /* Texto blanco para activo */
+			border-left: none;
+			border-radius: 4px;
+			background-color: ${COLORS.irishCoffeeDarker};
+			color: white;
 		}
 	}
 `;
@@ -104,7 +105,7 @@ export const StyledPageTitle = styled.span`
 	font-size: ${TYPOGRAPHY.tagline.fontSize};
 
 	@media (min-width: 768px) {
-		font-size: 14px; /* Ajustar tamaño */
-		font-weight: 500; /* Peso de fuente */
+		font-size: 16px;
+		font-weight: 600;
 	}
 `;

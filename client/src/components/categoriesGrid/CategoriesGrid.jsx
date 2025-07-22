@@ -41,6 +41,4 @@ const CategoriesGrid = () => {
 	);
 };
 
-//con useEffect hacer peticion al back de la url de categories
-
 export default CategoriesGrid;
