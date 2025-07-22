@@ -6,6 +6,12 @@ export const StyledDataContainer = styled.div`
 	flex-direction: column;
 	padding: 40px 40px;
 	gap: 40px;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 60px 80px;
+	}
 `;
 export const StyledDataItem = styled.div`
 	display: flex;

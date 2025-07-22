@@ -15,12 +15,23 @@ export const HeroSection = styled.div`
 	align-items: flex-start;
 	padding: 20px 30px;
 	position: relative;
+
+	@media (min-width: 768px) {
+		padding: 0;
+		width: 100%;
+		height: 600px;
+	}
 `;
 
 export const ContentWrapper = styled.div`
 	position: relative;
 	width: 100%;
 	color: ${COLORS.white};
+
+	@media (min-width: 768px) {
+		padding: 50px 100px;
+		margin-top: 40px;
+	}
 `;
 
 export const MainTitle = styled.h2`
@@ -30,13 +41,11 @@ export const MainTitle = styled.h2`
 	font-weight: 400;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-	/* @media (max-width: 768px) {
-		font-size: 2.5rem;
+	@media (min-width: 768px) {
+		font-size: 60px;
+		width: 70%;
+		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 	}
-
-	@media (max-width: 480px) {
-		font-size: 2rem;
-	} */
 `;
 
 export const Description = styled.p`
@@ -44,8 +53,10 @@ export const Description = styled.p`
 	font-size: ${TYPOGRAPHY.text.medium.fontSize};
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 
-	@media (max-width: 768px) {
-		font-size: 1.1rem;
+	@media (min-width: 768px) {
+		font-size: 24px;
+		width: 65%;
+		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 	}
 `;
 
@@ -70,5 +81,10 @@ export const Button = styled.button`
 
 	&:active {
 		transform: translateY(0);
+	}
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+		margin-top: 20px;
 	}
 `;
