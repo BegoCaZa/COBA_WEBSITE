@@ -15,3 +15,20 @@ export const getAllCategories = async () => {
 		throw error;
 	}
 };
+
+export const getProductsByCategory = async category => {
+	try {
+		const response = await fetch(
+			`${URL_BASE}/api/products/categories/${category}`
+		);
+		if (response.ok) {
+			const products = await response.json();
+			return products;
+		} else {
+			return [];
+		}
+	} catch (error) {
+		console.error('Error fetching products:', error);
+		return [];
+	}
+};

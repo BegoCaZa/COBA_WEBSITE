@@ -41,4 +41,8 @@ GET {{HOST}}/api/products/categories
 
 
 ###
-GET {{HOST}}/api/products/categories/Adocretos
+GET {{HOST}}/api/products/categories/Losa Prefabricada
+
+
+###
+GET http://localhost:3000/api/products/categories

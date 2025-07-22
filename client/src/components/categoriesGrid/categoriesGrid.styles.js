@@ -57,3 +57,35 @@ export const CategoriesSection = styled.section`
 	padding: 80px 0;
 	background-color: #f8f9fa;
 `;
+
+export const ProductsGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 10px;
+	padding: 15px;
+	margin-top: 10px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	animation: fadeIn 0.3s ease-in-out;
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+`;
+
+export const ProductItem = styled.div`
+	background: #f0f0f0;
+	padding: 10px;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 13px;
+	color: #333;
+`;
