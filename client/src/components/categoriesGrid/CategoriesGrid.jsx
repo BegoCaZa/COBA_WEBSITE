@@ -1,5 +1,4 @@
 import { v4 } from 'uuid';
-import { CATEGORIES } from '../../constants/categories';
 
 import {
 	CategoriesSection,

@@ -73,7 +73,7 @@ export const StyledPageItem = styled(NavLink)`
 	align-items: center;
 	gap: 11px;
 	text-decoration: none;
-	color: ${COLORS.irishCoffeeDarkest};
+	color: ${COLORS.white};
 	font-family: ${TYPOGRAPHY.bodyFont};
 	width: auto;
 	padding-left: 30px;

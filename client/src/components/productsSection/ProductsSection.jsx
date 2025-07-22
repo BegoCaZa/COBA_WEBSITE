@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CATEGORIES } from '../../constants/categories';
 import {
 	StyledGeneralContainer,
@@ -14,9 +14,13 @@ import {
 } from './productsSection.styles';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { v4 } from 'uuid';
+import { getAllCategories } from '../../lib/utils/api';
+import { useNavigate } from 'react-router-dom';
 
 const ProductsSection = () => {
 	const scrollRef = useRef(null);
+	const [categories, setCategories] = useState([]);
+	const navigate = useNavigate();
 
 	const scroll = direction => {
 		const { current } = scrollRef;
@@ -25,6 +29,20 @@ const ProductsSection = () => {
 			current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 		}
 	};
+
+	const handleNavigateToProducts = () => {
+		navigate('/products');
+	};
+
+	useEffect(() => {
+		const fetchCategories = async () => {
+			const data = await getAllCategories();
+			setCategories(data);
+			console.log('Fetched categories:', data);
+		};
+
+		fetchCategories();
+	}, []);
 
 	return (
 		<StyledGeneralContainer>
@@ -39,10 +57,10 @@ const ProductsSection = () => {
 				</StyledScrollButton>
 
 				<StyledProductCarouselContainer ref={scrollRef}>
-					{CATEGORIES.map(item => (
+					{categories.map(category => (
 						<StyledProductCard key={v4()}>
-							<img src={item.src} alt={item.name} />
-							<StyledCardText>{item.name}</StyledCardText>
+							<img src={`/assets/images/categorias/${category}.png`} />
+							<StyledCardText>{category}</StyledCardText>
 						</StyledProductCard>
 					))}
 				</StyledProductCarouselContainer>
@@ -53,7 +71,9 @@ const ProductsSection = () => {
 			</StyledContainer>
 
 			<StyledCatalogButtonContainer>
-				<StyledCatalogButton>Ver catálogo</StyledCatalogButton>
+				<StyledCatalogButton onClick={handleNavigateToProducts}>
+					Ver catálogo
+				</StyledCatalogButton>
 			</StyledCatalogButtonContainer>
 		</StyledGeneralContainer>
 	);
