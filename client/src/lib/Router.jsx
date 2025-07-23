@@ -10,10 +10,14 @@ const Router = () => {
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
 					<Route path='products' element={<Products />} />
+					<Route path='products/:category' element={<ProductsByCategory />} />
 				</Route>
 			</Routes>
 		</>
 	);
 };
+
+//usar useParams en el componente ProductsByCategory
+//
 
 export default Router;
