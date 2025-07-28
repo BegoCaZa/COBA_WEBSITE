@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router';
 import { getProductsByCategory } from '../../lib/utils/api';
 import { v4 } from 'uuid';
+import {
+	CategoryTitle,
+	GeneralContainer,
+	ProductCard,
+	ProductsGrid
+} from './productsByCategory.styles';
 
 const ProductsByCategory = () => {
 	const { category } = useParams();
@@ -37,23 +43,23 @@ const ProductsByCategory = () => {
 	}
 
 	return (
-		<div>
+		<GeneralContainer>
 			<button onClick={handleBackClick}>← Volver a categorías</button>
 
-			<h1>Productos de {category}</h1>
+			<CategoryTitle>Productos de {category}</CategoryTitle>
 
 			{products.length > 0 ? (
-				<div>
+				<ProductsGrid>
 					{products.map(product => (
-						<div key={v4()}>
-							<h3>{product.name}</h3>
-						</div>
+						<ProductCard key={v4()}>
+							<span>{product.name}</span>
+						</ProductCard>
 					))}
-				</div>
+				</ProductsGrid>
 			) : (
 				<p>No se encontraron productos para esta categoría.</p>
 			)}
-		</div>
+		</GeneralContainer>
 	);
 };
 

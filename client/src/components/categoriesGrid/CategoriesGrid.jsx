@@ -9,7 +9,7 @@ import {
 } from './categoriesGrid.styles';
 import { getAllCategories } from '../../lib/utils/api';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const CategoriesGrid = () => {
 	const [categories, setCategories] = useState([]);
@@ -32,7 +32,6 @@ const CategoriesGrid = () => {
 					<CategoryCard
 						key={v4()}
 						onClick={() => {
-							console.log('Clicked category:', category); // 👈 VERIFICACIÓN
 							navigate(`/products/${category}`);
 						}}
 					>

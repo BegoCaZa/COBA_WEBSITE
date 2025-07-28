@@ -18,7 +18,7 @@ export const GridContainer = styled.div`
 		grid-template-columns: repeat(4, 1fr);
 	}
 `;
-export const CategoryCard = styled(Link)`
+export const CategoryCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;

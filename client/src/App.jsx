@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Router from './lib/Router';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';

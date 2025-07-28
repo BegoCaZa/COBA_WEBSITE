@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import ProductHeaderFoto from '../../components/productHeaderFoto/ProductHeaderFoto';
 import TechnicalInfo from '../../components/technicalInfo/TechnicalInfo';
 import {
