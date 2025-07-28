@@ -1,4 +1,4 @@
-import CategoriesGrid from '../../components/categoriesGrid/CategoriesGrid';
+import { Outlet } from 'react-router-dom';
 import ProductHeaderFoto from '../../components/productHeaderFoto/ProductHeaderFoto';
 import TechnicalInfo from '../../components/technicalInfo/TechnicalInfo';
 import {
@@ -22,9 +22,12 @@ const Products = () => {
 					</Description>
 				</SecondSectionText>
 			</FirstSection>
-			<CategoriesGrid />
+
+			<Outlet />
+
 			<TechnicalInfo />
 		</>
 	);
 };
+
 export default Products;
