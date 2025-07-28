@@ -38,6 +38,23 @@ const getProductsByCategory = async (req, res) => {
   res.status(200).json(products);
 };
 
+//GET PRODUCT BY ID
+const getProductById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const product = await ProductModel.findById(id);
+    if (!product) {
+      return res.status(404).json({ message: 'Product not found' });
+    }
+    res.status(200).json(product);
+  } catch (error) {
+    console.error('Error fetching product by ID:', error);
+    return res
+      .status(500)
+      .json({ message: 'Server error', error: error.message });
+  }
+};
+
 //UPDATE PRODUCT BY ID
 const updateProduct = async (req, res) => {
   const { id } = req.params;
@@ -64,5 +81,6 @@ module.exports = {
   updateProduct,
   deleteProduct,
   getAllCategories,
-  getProductsByCategory
+  getProductsByCategory,
+  getProductById
 };

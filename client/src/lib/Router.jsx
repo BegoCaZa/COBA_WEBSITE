@@ -4,6 +4,7 @@ import Home from '../pages/home/Home';
 import Products from '../pages/products/Products';
 import CategoriesGrid from '../components/categoriesGrid/CategoriesGrid';
 import ProductsByCategory from '../components/productsByCategory/ProductsByCategory';
+import ProductOverview from '../components/productOverview/ProductOverview';
 
 const Router = () => {
 	return (
@@ -13,7 +14,9 @@ const Router = () => {
 
 				<Route path='products' element={<Products />}>
 					<Route index element={<CategoriesGrid />} />
-					<Route path=':category' element={<ProductsByCategory />} />
+					<Route path=':category' element={<ProductsByCategory />}>
+						<Route path=':productId' element={<ProductOverview />} />
+					</Route>
 				</Route>
 			</Route>
 		</Routes>

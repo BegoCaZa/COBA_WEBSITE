@@ -1,26 +1,34 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router';
+import { useParams, useNavigate, Outlet } from 'react-router';
 import { getProductsByCategory } from '../../lib/utils/api';
-import { v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import {
 	CategoryTitle,
 	GeneralContainer,
 	ProductCard,
-	ProductsGrid
+	ProductsGrid,
+	StyledBackButton
 } from './productsByCategory.styles';
 
 const ProductsByCategory = () => {
-	const { category } = useParams();
+	const { category, productId } = useParams();
 	const navigate = useNavigate();
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(true);
 
+	const isProductSelected = Boolean(productId);
+
 	useEffect(() => {
 		const fetchProducts = async () => {
 			setLoading(true);
-			const productsData = await getProductsByCategory(category);
-			setProducts(productsData);
-			setLoading(false);
+			try {
+				const productsData = await getProductsByCategory(category);
+				setProducts(productsData);
+			} catch (error) {
+				console.error('Error fetching products:', error);
+			} finally {
+				setLoading(false);
+			}
 		};
 
 		if (category) {
@@ -32,7 +40,9 @@ const ProductsByCategory = () => {
 		navigate('/products');
 	};
 
-	console.log('Category', category);
+	const handleProductClick = product => {
+		navigate(`/products/${category}/${product._id}`);
+	};
 
 	if (loading) {
 		return (
@@ -44,21 +54,37 @@ const ProductsByCategory = () => {
 
 	return (
 		<GeneralContainer>
-			<button onClick={handleBackClick}>← Volver a categorías</button>
+			{!isProductSelected && (
+				<>
+					<StyledBackButton onClick={handleBackClick}>
+						← Volver a categorías
+					</StyledBackButton>
 
-			<CategoryTitle>Productos de {category}</CategoryTitle>
+					<CategoryTitle>{category}</CategoryTitle>
 
-			{products.length > 0 ? (
-				<ProductsGrid>
-					{products.map(product => (
-						<ProductCard key={v4()}>
-							<span>{product.name}</span>
-						</ProductCard>
-					))}
-				</ProductsGrid>
-			) : (
-				<p>No se encontraron productos para esta categoría.</p>
+					{products.length > 0 ? (
+						<ProductsGrid>
+							{products.map(product => (
+								<ProductCard
+									onClick={() => handleProductClick(product)}
+									key={uuidv4()}
+								>
+									<img
+										src={`/assets/images/tejas/${product.model}.png`}
+										alt={product.name}
+										style={{ width: '100%', height: 'auto' }}
+									/>
+									<span>{product.name}</span>
+								</ProductCard>
+							))}
+						</ProductsGrid>
+					) : (
+						<p>No se encontraron productos para esta categoría.</p>
+					)}
+				</>
 			)}
+
+			<Outlet />
 		</GeneralContainer>
 	);
 };

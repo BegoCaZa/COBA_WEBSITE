@@ -32,3 +32,18 @@ export const getProductsByCategory = async category => {
 		return [];
 	}
 };
+
+export const getProductById = async id => {
+	try {
+		const response = await fetch(`${URL_BASE}/api/products/${id}`);
+		if (response.ok) {
+			const product = await response.json();
+			return product;
+		} else {
+			throw new Error('Product not found');
+		}
+	} catch (error) {
+		console.error('Error fetching product by ID:', error);
+		throw error;
+	}
+};
