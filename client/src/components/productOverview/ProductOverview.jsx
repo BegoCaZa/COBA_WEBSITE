@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getProductById } from '../../lib/utils/api';
-import { GeneralContainer, StyledBackButton } from './productOverview.styles';
+import {
+	GeneralContainer,
+	StyledBackButton,
+	StyledColorList,
+	StyledListItem
+} from './productOverview.styles';
 
 const ProductOverview = () => {
 	const { category, productId } = useParams();
@@ -40,18 +45,18 @@ const ProductOverview = () => {
 			{product ? (
 				<div>
 					<img
-						src={`/assets/images/tejas/${product.model}.png`}
+						src={`/assets/images/${category}/${product.model}.png`}
 						alt={product.name}
 					/>
 					<h1>{product.name}</h1>
 					<p>{product.description}</p>
-					{product.colors}
+
 					{product.colors ? (
-						<ul>
+						<StyledColorList>
 							{product.colors.map((color, index) => (
-								<li key={index}>{color}</li>
+								<StyledListItem key={index}>{color}</StyledListItem>
 							))}
-						</ul>
+						</StyledColorList>
 					) : (
 						<p>No colors available for this product.</p>
 					)}

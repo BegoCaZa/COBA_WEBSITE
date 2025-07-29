@@ -70,7 +70,7 @@ const ProductsByCategory = () => {
 									key={uuidv4()}
 								>
 									<img
-										src={`/assets/images/tejas/${product.model}.png`}
+										src={`/assets/images/${category}/${product.model}.png`}
 										alt={product.name}
 										style={{ width: '100%', height: 'auto' }}
 									/>
