@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import FotoGallery from '../fotoGallery/FotoGallery';
 import {
 	StyledButton,
@@ -8,6 +9,11 @@ import {
 } from './secondSection.styles';
 
 const SecondSection = () => {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/contact');
+	};
 	return (
 		<StyledGeneralContainer>
 			<StyledTextContainer>
@@ -18,7 +24,7 @@ const SecondSection = () => {
 				</StyledSubheader>
 			</StyledTextContainer>
 			<FotoGallery />
-			<StyledButton>CONTACTA A UN VENDEDOR</StyledButton>
+			<StyledButton onClick={handleClick}>CONTACTA A UN VENDEDOR</StyledButton>
 		</StyledGeneralContainer>
 	);
 };

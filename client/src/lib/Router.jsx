@@ -5,6 +5,7 @@ import Products from '../pages/products/Products';
 import CategoriesGrid from '../components/categoriesGrid/CategoriesGrid';
 import ProductsByCategory from '../components/productsByCategory/ProductsByCategory';
 import ProductOverview from '../components/productOverview/ProductOverview';
+import ContactPage from '../pages/contactPage/ContactPage';
 
 const Router = () => {
 	return (
@@ -18,6 +19,7 @@ const Router = () => {
 						<Route path=':productId' element={<ProductOverview />} />
 					</Route>
 				</Route>
+				<Route path='contact' element={<ContactPage />} />
 			</Route>
 		</Routes>
 	);

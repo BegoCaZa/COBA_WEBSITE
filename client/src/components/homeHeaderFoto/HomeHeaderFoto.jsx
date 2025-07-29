@@ -1,3 +1,4 @@
+import { Navigate, useNavigate } from 'react-router';
 import {
 	Button,
 	ContentWrapper,
@@ -7,6 +8,12 @@ import {
 } from './homeHeaderFoto.styles';
 
 const HomeHeaderFoto = () => {
+	const navigate = useNavigate();
+
+	const handleContactClick = () => {
+		navigate('/contact');
+	};
+
 	return (
 		<HeroSection>
 			<ContentWrapper>
@@ -19,7 +26,7 @@ const HomeHeaderFoto = () => {
 					<br /> Descubre nuestra amplia gama de productos diseñados para
 					satisfacer todas las necesidades de tus proyectos.
 				</Description>
-				<Button>Cotizar</Button>
+				<Button onClick={handleContactClick}>Cotizar</Button>
 			</ContentWrapper>
 		</HeroSection>
 	);

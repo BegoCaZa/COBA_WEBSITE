@@ -10,6 +10,10 @@ export const GeneralContainer = styled.div`
 	padding: 20px;
 	min-height: 100vh;
 	width: 100%;
+
+	@media (min-width: 768px) {
+		padding: 50px;
+	}
 `;
 export const ProductsGrid = styled.div`
 	display: flex;

@@ -8,6 +8,8 @@ import {
 	Subheader,
 	Subtitle
 } from './products.styles';
+import CTAPresupuesto from '../../components/ctaPresupuesto/CTApresupuesto';
+import Footer from '../../components/footer/Footer';
 
 const Products = () => {
 	return (
@@ -26,6 +28,8 @@ const Products = () => {
 			<Outlet />
 
 			<TechnicalInfo />
+			<CTAPresupuesto />
+			<Footer />
 		</>
 	);
 };

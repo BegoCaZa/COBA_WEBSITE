@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { CATEGORIES } from '../../constants/categories';
 import {
 	StyledGeneralContainer,
 	StyledTitle,
@@ -34,6 +33,10 @@ const ProductsSection = () => {
 		navigate('/products');
 	};
 
+	const handleCategoryClick = category => {
+		navigate(`/products/${category}`);
+	};
+
 	useEffect(() => {
 		const fetchCategories = async () => {
 			const data = await getAllCategories();
@@ -58,7 +61,11 @@ const ProductsSection = () => {
 
 				<StyledProductCarouselContainer ref={scrollRef}>
 					{categories.map(category => (
-						<StyledProductCard key={v4()}>
+						<StyledProductCard
+							key={v4()}
+							onClick={() => handleCategoryClick(category)}
+							style={{ cursor: 'pointer' }}
+						>
 							<img src={`/assets/images/categorias/${category}.png`} />
 							<StyledCardText>{category}</StyledCardText>
 						</StyledProductCard>
